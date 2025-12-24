@@ -1,26 +1,172 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Flourish Bread Company Color Palette (Instagram-Inspired) */
+  --color-golden-crust: #C17A3A;
+  --color-warm-amber: #8B5A2B;
+  --color-cream-white: #FFF8E7;
+  --color-pure-white: #FFFFFF;
+  --color-sage-green: #6B7F5B;
+  --color-olive-green: #8B9B7E;
+  --color-burgundy-red: #8B2323;
+  --color-natural-wood: #A0826D;
+  --color-charcoal: #2D2D2D;
+  --color-mustard-yellow: #C9963B;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Custom colors (Instagram-inspired) */
+  --color-golden-crust: #C17A3A;
+  --color-warm-amber: #8B5A2B;
+  --color-cream-white: #FFF8E7;
+  --color-pure-white: #FFFFFF;
+  --color-sage-green: #6B7F5B;
+  --color-olive-green: #8B9B7E;
+  --color-burgundy-red: #8B2323;
+  --color-natural-wood: #A0826D;
+  --color-charcoal: #2D2D2D;
+  --color-mustard-yellow: #C9963B;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Font families */
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+  --font-accent: var(--font-accent);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-cream-white);
+  color: var(--color-charcoal);
+  font-family: var(--font-body), sans-serif;
+}
+
+/* Animation utilities */
+.animate-reveal {
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-reveal-hidden {
+  opacity: 0;
+}
+
+.animate-reveal-visible {
+  opacity: 1;
+}
+
+/* Animation variants */
+.animate-fade-up {
+  transform: translateY(30px);
+}
+
+.animate-fade-up.animate-reveal-visible {
+  transform: translateY(0);
+}
+
+.animate-fade-in {
+  opacity: 0;
+}
+
+.animate-fade-in.animate-reveal-visible {
+  opacity: 1;
+}
+
+.animate-slide-left {
+  transform: translateX(-30px);
+  opacity: 0;
+}
+
+.animate-slide-left.animate-reveal-visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.animate-slide-right {
+  transform: translateX(30px);
+  opacity: 0;
+}
+
+.animate-slide-right.animate-reveal-visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.animate-scale-in {
+  transform: scale(0.95);
+  opacity: 0;
+}
+
+.animate-scale-in.animate-reveal-visible {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.animate-slide-down {
+  transform: translateY(-30px);
+  opacity: 0;
+}
+
+.animate-slide-down.animate-reveal-visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .animate-reveal,
+  .animate-reveal * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Texture overlays */
+.texture-linen {
+  position: relative;
+}
+
+.texture-linen::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.02) 2px,
+      rgba(0, 0, 0, 0.02) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.02) 2px,
+      rgba(0, 0, 0, 0.02) 4px
+    );
+  pointer-events: none;
+}
+
+.texture-wood {
+  position: relative;
+}
+
+.texture-wood::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.03) 0px,
+      transparent 1px,
+      transparent 40px,
+      rgba(0, 0, 0, 0.03) 41px
+    );
+  pointer-events: none;
 }
