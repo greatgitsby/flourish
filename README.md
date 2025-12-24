@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Flourish Bread Company
+
+A modern single-page website for Flourish Bread Company, an artisan sourdough bakery based in Turlock, California. The site showcases handcrafted sourdough products, bakery information, and presence at the local farmer's market.
+
+## Tech Stack
+
+- **Next.js 16** - App Router with server-first architecture
+- **React 19** - Latest React with TypeScript support
+- **TypeScript 5** - Full type safety
+- **Tailwind CSS v4** - New PostCSS plugin architecture
+- **Custom Animations** - Scroll-triggered animations using IntersectionObserver
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+ installed
+
+### Installation
+
+```bash
+npm install
+```
+
+### Development
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site. The page auto-updates as you edit files.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a production build:
 
-## Learn More
+```bash
+npm run build
+npm start
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Lint
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Run ESLint to check code quality:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run lint
+```
 
-## Deploy on Vercel
+## Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+app/
+├── layout.tsx              # Root layout with fonts and metadata
+├── page.tsx                # Homepage (single-page app)
+├── globals.css             # Global styles, CSS variables, animations
+└── components/
+    ├── HeroSection.tsx           # Landing section
+    ├── ProductsSection.tsx       # Product showcase
+    ├── AboutSection.tsx          # Bakery information
+    ├── InstagramSection.tsx      # Social media integration
+    ├── ContactSection.tsx        # Contact/location
+    ├── ChristmasBanner.tsx       # Seasonal banner
+    ├── ui/
+    │   ├── AnimatedElement.tsx   # Scroll animation wrapper
+    │   ├── Button.tsx            # Reusable button
+    │   └── SectionContainer.tsx  # Section layout wrapper
+    ├── Logo.tsx                  # SVG logo component
+    └── ProductCard.tsx           # Product display card
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Styling System
+
+### Colors
+Custom earth-tone palette defined as CSS variables in `globals.css`:
+- `--color-golden-crust` (#C17A3A)
+- `--color-warm-amber` (#8B5A2B)
+- `--color-cream-white` (#FFF8E7)
+- Plus sage greens, burgundy, natural wood tones, and more
+
+Use in Tailwind: `bg-[var(--color-golden-crust)]`
+
+### Typography
+Three Google Fonts loaded via `next/font`:
+- **Playfair Display** - Headings (`var(--font-heading)`)
+- **Inter** - Body text (`var(--font-body)`)
+- **Marcellus** - Accent text (`var(--font-accent)`)
+
+### Textures
+- `.texture-linen` - Subtle crosshatch overlay
+- `.texture-wood` - Vertical wood grain
+
+### Animations
+Custom animation variants in `globals.css`:
+- `fadeUp`, `fadeIn`, `slideLeft`, `slideRight`, `scaleIn`
+- Controlled by `<AnimatedElement>` component
+- Respects `prefers-reduced-motion`
+
+## Key Features
+
+- Server-first architecture with minimal client components
+- Responsive design optimized for mobile and desktop
+- Scroll-triggered animations for visual engagement
+- Custom color palette inspired by artisan bread and natural materials
+- SEO optimized with proper metadata and OpenGraph tags
+- Path aliases (`@/*`) for clean imports
+
+## Notes
+
+- Uses Tailwind CSS v4 with new `@tailwindcss/postcss` plugin (no `tailwind.config.js`)
+- Configuration in `@theme` blocks within CSS files
+- TypeScript strict mode enabled
+- ESLint configured for Next.js and TypeScript best practices
