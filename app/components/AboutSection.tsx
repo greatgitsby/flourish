@@ -3,9 +3,9 @@ import Image from 'next/image';
 import SectionContainer from './ui/SectionContainer';
 import AnimatedElement from './ui/AnimatedElement';
 
-export default function AboutSection() {
+export default function AboutSection(props: React.HTMLAttributes<HTMLElement>) {
   return (
-    <SectionContainer background="soft-gray" as="section">
+    <SectionContainer background="soft-gray" as="section" {...props}>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         {/* Annie's Photo */}
         <AnimatedElement variant="slideLeft">

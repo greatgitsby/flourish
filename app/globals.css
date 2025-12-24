@@ -170,3 +170,116 @@ body {
     );
   pointer-events: none;
 }
+
+/* Blog post prose styling */
+.prose-flourish {
+  font-family: var(--font-body);
+  color: var(--color-charcoal);
+  line-height: 1.8;
+}
+
+.prose-flourish h2 {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-charcoal);
+}
+
+.prose-flourish h3 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-charcoal);
+}
+
+.prose-flourish p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.prose-flourish a {
+  color: var(--color-golden-crust);
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.prose-flourish a:hover {
+  color: var(--color-warm-amber);
+}
+
+.prose-flourish blockquote {
+  border-left: 4px solid var(--color-golden-crust);
+  padding-left: 1.5rem;
+  font-style: italic;
+  font-size: 1.25rem;
+  margin: 2rem 0;
+  font-family: var(--font-heading);
+}
+
+.prose-flourish ul,
+.prose-flourish ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.prose-flourish li {
+  margin-bottom: 0.5rem;
+}
+
+.prose-flourish code {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.prose-flourish pre {
+  background: var(--color-charcoal);
+  color: var(--color-cream-white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 2rem 0;
+}
+
+.prose-flourish img {
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  margin: 2rem 0;
+}
+
+/* Stagger animations for blog grid */
+.animate-stagger-1 { animation-delay: 0ms; }
+.animate-stagger-2 { animation-delay: 100ms; }
+.animate-stagger-3 { animation-delay: 200ms; }
+.animate-stagger-4 { animation-delay: 300ms; }
+.animate-stagger-5 { animation-delay: 400ms; }
+.animate-stagger-6 { animation-delay: 500ms; }
+
+/* Recipe card rotations */
+.card-tilt-left { transform: rotate(-0.5deg); }
+.card-tilt-right { transform: rotate(0.5deg); }
+
+/* Nav link hover effect */
+.nav-link {
+  position: relative;
+  transition: color 0.2s;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-golden-crust);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}

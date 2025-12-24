@@ -4,9 +4,9 @@ import AnimatedElement from './ui/AnimatedElement';
 import Button from './ui/Button';
 import Logo from './Logo';
 
-export default function ContactSection() {
+export default function ContactSection(props: React.HTMLAttributes<HTMLElement>) {
   return (
-    <SectionContainer background="warm-amber" as="section" className="scroll-mt-16 texture-wood relative" id="contact">
+    <SectionContainer background="warm-amber" as="section" className="scroll-mt-16 texture-wood relative" {...props}>
       {/* Logo Decoration */}
       <div className="absolute top-8 right-8 opacity-10 hidden md:block">
         <Logo size="xl" color="light" />

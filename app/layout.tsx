@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter, Marcellus } from "next/font/google";
+import Navigation from "./components/Navigation";
 import "./globals.css";
 
 const playfairDisplay = Playfair_Display({
@@ -44,6 +45,7 @@ export default function RootLayout({
       <body
         className={`${playfairDisplay.variable} ${inter.variable} ${marcellus.variable} antialiased`}
       >
+        <Navigation />
         {children}
       </body>
     </html>

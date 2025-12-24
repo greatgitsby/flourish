@@ -6,12 +6,12 @@ import ContactSection from './components/ContactSection';
 
 export default function Home() {
   return (
-    <main>
+    <main className="pt-20">
       <HeroSection />
       <ProductsSection />
-      <AboutSection />
+      <AboutSection id="about" />
       <InstagramSection />
-      <ContactSection />
+      <ContactSection id="contact" />
     </main>
   );
 }
