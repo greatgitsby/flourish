@@ -3,7 +3,7 @@ import React from 'react';
 interface SectionContainerProps extends React.HTMLAttributes<HTMLElement> {
   children: React.ReactNode;
   className?: string;
-  background?: 'cream-white' | 'pure-white' | 'sage-green' | 'warm-amber' | 'soft-gray';
+  background?: 'cream-white' | 'pure-white' | 'sage-green' | 'warm-amber' | 'soft-gray' | 'cream';
   as?: 'section' | 'div';
 }
 
