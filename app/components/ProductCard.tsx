@@ -1,28 +1,43 @@
 import React from 'react';
 import Image from 'next/image';
+import ProductImageCarousel from './ui/ProductImageCarousel';
 
 interface ProductCardProps {
   name: string;
   description: string;
   gradientColors: string;
-  image?: string;
+  images?: string[];
 }
 
-export default function ProductCard({ name, description, gradientColors, image }: ProductCardProps) {
+export default function ProductCard({ name, description, gradientColors, images }: ProductCardProps) {
+  const hasImages = images && images.length > 0;
+
   return (
     <div className="group cursor-default">
       <div className="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white">
         {/* Product Image or Gradient Placeholder */}
         <div className="aspect-[4/3] overflow-hidden relative">
-          {image ? (
-            <Image
-              src={image}
-              alt={name}
-              fill
-              className="object-cover transition-transform duration-300 group-hover:scale-105"
-              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            />
+          {hasImages ? (
+            images.length === 1 ? (
+              // Single image: render simple Image component
+              <Image
+                src={images[0]}
+                alt={name}
+                fill
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
+            ) : (
+              // Multiple images: render carousel
+              <ProductImageCarousel
+                images={images}
+                alt={name}
+                gradientColors={gradientColors}
+                productName={name}
+              />
+            )
           ) : (
+            // No images: render gradient fallback
             <div
               className={`w-full h-full flex items-center justify-center transition-transform duration-300 group-hover:scale-105 ${gradientColors}`}
             >

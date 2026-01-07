@@ -7,49 +7,49 @@ const products: Array<{
   name: string;
   description: string;
   gradientColors: string;
-  image?: string;
+  images?: string[];
 }> = [
   {
     name: 'Sourdough Boules & Loaves',
     description:
       'Our signature naturally leavened sourdough bread, baked to golden perfection with a crispy crust and tender, airy crumb.',
     gradientColors: 'bg-gradient-to-br from-[#C17A3A] to-[#8B5A2B]',
-    image: '/sourdough-bread.jpg',
+    images: ['/sourdough-bread.jpg', '/bread1.jpg', '/loaf1.jpg'],
   },
   {
     name: 'Scones',
     description:
       'Buttery, flaky scones in rotating flavors including blueberry, chocolate chip, and double chocolate. Perfect with your morning coffee or afternoon tea.',
     gradientColors: 'bg-gradient-to-br from-[#D4A04C] via-[#C17A3A] to-[#6B7F5B]',
-    image: '/blueberry-scone.jpg',
+    images: ['/blueberry-scone.jpg'],
   },
   {
     name: 'Sourdough Pizza Crusts',
     description:
       'Take our artisan sourdough home for your own pizza night. Pre-baked and ready for your favorite toppings.',
     gradientColors: 'bg-gradient-to-br from-[#FFF8E7] to-[#D4A04C]',
-    image: '/pizza-crusts.jpg',
+    images: ['/pizza-crusts.jpg', '/pizza1.jpg', '/pizza2.jpg'],
   },
   {
     name: 'Chocolate Chip Cookies',
     description:
       'Classic cookies with a perfect balance of crispy edges and chewy centers, loaded with chocolate chips.',
     gradientColors: 'bg-gradient-to-br from-[#D4A04C] to-[#8B5A2B]',
-    image: '/chocolate-chip-cookies.jpg',
+    images: ['/chocolate-chip-cookies.jpg', '/cookies1.jpg', '/cookies2.jpg'],
   },
   {
     name: 'Corn Cookies',
     description:
       'A unique sweet treat with a delicate corn flavor and tender texture. These cookies are a delightful surprise.',
     gradientColors: 'bg-gradient-to-br from-[#F4D03F] to-[#D4A04C]',
-    image: '/corn-cookies.jpg',
+    images: ['/corn-cookies.jpg'],
   },
   {
     name: 'Granola',
     description:
       'House-made granola with toasted oats, nuts, and dried fruits. Perfect for breakfast or snacking.',
     gradientColors: 'bg-gradient-to-br from-[#C9963B] to-[#A0826D]',
-    image: '/granola.jpg',
+    images: ['/granola.jpg'],
   },
 ];
 
@@ -81,7 +81,7 @@ export default function ProductsSection() {
               name={product.name}
               description={product.description}
               gradientColors={product.gradientColors}
-              image={product.image}
+              images={product.images}
             />
           </AnimatedElement>
         ))}
