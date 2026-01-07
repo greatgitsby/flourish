@@ -3,7 +3,7 @@ pipeline {
     environment {
         IMAGE_NAME = 'flourish-bread'
         CONTAINER_NAME = 'flourish-bread-app'
-        HOST_PORT = '3000'
+        HOST_PORT = '3001'
     }
     stages {
         stage('Build Image') {
