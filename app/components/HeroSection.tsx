@@ -9,7 +9,7 @@ export default function HeroSection() {
       <div className="max-w-4xl mx-auto text-center">
         <AnimatedElement variant="scaleIn" delay={0}>
           <div className="mb-8">
-            <Logo size="lg" color="dark" className="mx-auto" />
+            <Logo size="xl" color="dark" className="mx-auto" />
           </div>
         </AnimatedElement>
 
