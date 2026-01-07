@@ -6,6 +6,11 @@ pipeline {
         HOST_PORT = '3001'
     }
     stages {
+        stage('Fetch LFS Files') {
+            steps {
+                sh 'git lfs pull'
+            }
+        }
         stage('Build Image') {
             steps {
                 sh 'docker build -t ${IMAGE_NAME}:${BUILD_NUMBER} -t ${IMAGE_NAME}:latest .'
