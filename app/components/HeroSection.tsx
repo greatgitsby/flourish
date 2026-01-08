@@ -5,7 +5,7 @@ import Logo from './Logo';
 
 export default function HeroSection() {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-[var(--color-cream-white)] texture-linen px-6">
+    <section className="min-h-screen flex items-center justify-center bg-[var(--color-cream-white)] texture-linen px-6 pt-20">
       <div className="max-w-4xl mx-auto text-center">
         <AnimatedElement variant="scaleIn" delay={0}>
           <div className="mb-8">
