@@ -50,7 +50,7 @@ export default function AboutSection(props: React.HTMLAttributes<HTMLElement>) {
               </p>
 
               <p>
-                Annie serves as vice president of the Turlock Farmer&apos;s Market board, where
+                Annie serves as president of the Turlock Farmer&apos;s Market board, where
                 she&apos;s proud to connect directly with the community each week. With professional
                 equipment including two Rofco steam ovens and commercial mixers, she maintains the
                 highest standards of quality while preserving the handcrafted character that makes
