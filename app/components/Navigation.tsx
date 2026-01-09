@@ -6,6 +6,9 @@ import Logo from './Logo';
 export default function Navigation() {
 
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    // Let default navigation handle it if not on homepage
+    if (window.location.pathname !== '/') return;
+
     e.preventDefault();
     const element = document.querySelector(targetId);
     if (element) {
