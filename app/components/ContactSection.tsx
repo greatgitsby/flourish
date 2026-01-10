@@ -51,13 +51,7 @@ export default function ContactSection(props: React.HTMLAttributes<HTMLElement>)
                 </p>
               </div>
 
-              <div className="pt-4">
-                <p className="text-base opacity-90">
-                  Located in the heart of Central California, surrounded by the almond orchards and
-                  dairies that inspire our craft. We&apos;re proud to serve our community with the
-                  freshest artisan breads and baked goods every market day.
-                </p>
-              </div>
+              
             </div>
           </div>
         </AnimatedElement>
@@ -97,19 +91,7 @@ export default function ContactSection(props: React.HTMLAttributes<HTMLElement>)
                 </Button>
               </div>
 
-              <div className="pt-6">
-                <h3
-                  className="text-2xl mb-3 text-[var(--color-golden)]"
-                  style={{ fontFamily: 'var(--font-heading)' }}
-                >
-                  Special Orders
-                </h3>
-                <p>
-                  Planning an event? We&apos;d love to provide fresh bread and baked goods for your
-                  special occasion. Reach out via Instagram to discuss custom orders and
-                  availability.
-                </p>
-              </div>
+              
             </div>
           </div>
         </AnimatedElement>
