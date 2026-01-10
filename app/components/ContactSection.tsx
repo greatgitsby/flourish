@@ -32,7 +32,14 @@ export default function ContactSection(props: React.HTMLAttributes<HTMLElement>)
                   className="text-2xl mb-2 text-[var(--color-golden)]"
                   style={{ fontFamily: 'var(--font-heading)' }}
                 >
-                  Turlock Farmer&apos;s Market
+                  <a 
+                    href="https://www.instagram.com/turlockfarmersmarket"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline decoration-2 underline-offset-4 decoration-[var(--color-golden)] hover:decoration-[var(--color-cream)] transition-all duration-200"
+                  >
+                    Turlock Farmer&apos;s Market
+                  </a>
                 </h3>
                 <p>Downtown Turlock, California</p>
                 <p>Central Valley&apos;s finest farmer&apos;s market</p>
