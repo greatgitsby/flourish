@@ -50,8 +50,6 @@ export default function ContactSection(props: React.HTMLAttributes<HTMLElement>)
                   (Check Instagram for weekly availability and special items)
                 </p>
               </div>
-
-              
             </div>
           </div>
         </AnimatedElement>
@@ -90,8 +88,6 @@ export default function ContactSection(props: React.HTMLAttributes<HTMLElement>)
                   Message Us on Instagram
                 </Button>
               </div>
-
-              
             </div>
           </div>
         </AnimatedElement>
