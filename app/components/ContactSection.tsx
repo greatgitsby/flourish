@@ -53,9 +53,6 @@ export default function ContactSection(props: React.HTMLAttributes<HTMLElement>)
                   Market Hours
                 </h4>
                 <p>Visit us weekly for fresh-baked goods</p>
-                <p className="text-sm opacity-75 mt-2">
-                  (Check Instagram for weekly availability and special items)
-                </p>
               </div>
             </div>
           </div>
