@@ -20,7 +20,7 @@ export default function BlogPage() {
             className="text-6xl md:text-7xl text-[var(--color-charcoal)] mb-6"
             style={{ fontFamily: 'var(--font-heading)' }}
           >
-            The Baker's Journal
+            The Baker&apos;s Journal
           </h1>
           <p
             className="text-xl text-[var(--color-charcoal)]/70"
@@ -49,7 +49,7 @@ export default function BlogPage() {
               className="text-6xl md:text-7xl lg:text-8xl text-[var(--color-charcoal)] mb-6"
               style={{ fontFamily: 'var(--font-heading)' }}
             >
-              The Baker's Journal
+              The Baker&apos;s Journal
             </h1>
             <p
               className="text-xl text-[var(--color-charcoal)]/70 leading-relaxed"
