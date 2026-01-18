@@ -5,11 +5,19 @@ import Script from 'next/script';
 import SectionContainer from './ui/SectionContainer';
 import AnimatedElement from './ui/AnimatedElement';
 
+interface WindowWithInstagram extends Window {
+  instgrm?: {
+    Embeds: {
+      process: () => void;
+    };
+  };
+}
+
 export default function InstagramSection() {
   useEffect(() => {
     // Reinitialize Instagram embeds when component mounts
-    if (typeof window !== 'undefined' && (window as any).instgrm) {
-      (window as any).instgrm.Embeds.process();
+    if (typeof window !== 'undefined' && (window as WindowWithInstagram).instgrm) {
+      (window as WindowWithInstagram).instgrm?.Embeds.process();
     }
   }, []);
 
@@ -321,8 +329,8 @@ export default function InstagramSection() {
         src="//www.instagram.com/embed.js"
         strategy="lazyOnload"
         onLoad={() => {
-          if (typeof window !== 'undefined' && (window as any).instgrm) {
-            (window as any).instgrm.Embeds.process();
+          if (typeof window !== 'undefined' && (window as WindowWithInstagram).instgrm) {
+            (window as WindowWithInstagram).instgrm?.Embeds.process();
           }
         }}
       />

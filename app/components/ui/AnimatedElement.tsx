@@ -50,9 +50,10 @@ export default function AnimatedElement({
       observer.observe(elementRef.current);
     }
 
+    const element = elementRef.current;
     return () => {
-      if (elementRef.current) {
-        observer.unobserve(elementRef.current);
+      if (element) {
+        observer.unobserve(element);
       }
     };
   }, [delay]);
@@ -62,7 +63,7 @@ export default function AnimatedElement({
 
   return (
     <Component
-      ref={elementRef as any}
+      ref={elementRef as React.Ref<HTMLElement>}
       className={`animate-reveal ${animationClass} ${visibilityClass} ${className}`}
     >
       {children}

@@ -14,7 +14,7 @@ export default function BlogNotFound() {
           className="text-xl text-[var(--color-charcoal)]/70 mb-8"
           style={{ fontFamily: 'var(--font-body)' }}
         >
-          Sorry, we couldn't find the blog post you're looking for. It may have been moved or doesn't exist.
+          Sorry, we couldn&apos;t find the blog post you&apos;re looking for. It may have been moved or doesn&apos;t exist.
         </p>
         <Link
           href="/blog"

@@ -9,7 +9,7 @@ const postsDirectory = path.join(process.cwd(), 'content/blog');
 /**
  * Validate frontmatter data has all required fields
  */
-function validateFrontmatter(data: any): BlogPostFrontmatter {
+function validateFrontmatter(data: Record<string, unknown>): BlogPostFrontmatter {
   if (!data.title || !data.date || !data.excerpt) {
     throw new Error(`Invalid frontmatter: missing required fields (title, date, excerpt)`);
   }
