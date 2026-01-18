@@ -10,20 +10,21 @@ Flourish Bread Company is a Next.js 16 website for an artisan sourdough bakery i
 
 ```bash
 # Development server (runs on http://localhost:3000)
-npm run dev
+bun dev
 
 # Production build
-npm run build
+bun run build
 
 # Start production server
-npm start
+bun run start
 
 # Lint code
-npm run lint
+bun run lint
 ```
 
 ## Technology Stack
 
+- **Runtime**: Bun
 - **Framework**: Next.js 16 (App Router)
 - **React**: Version 19
 - **TypeScript**: Version 5
